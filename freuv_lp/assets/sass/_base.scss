@@ -1,0 +1,167 @@
+/* ======================================================================
+ base
+====================================================================== */
+
+html {
+  font-size: 62.5%; // 1em = 10px
+}
+
+body {
+  position: relative;
+  background: #fff;
+  color: $color_3;
+  font-family: $noto_sans_font;
+  word-wrap : break-word;
+  word-break: break-all;
+  -webkit-text-size-adjust: 100%;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+  @include transition(all .4s linear);
+  &.js_page_trans {
+    opacity: 0;
+  }
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  width: 100%;
+  // min-height: 100%;
+  margin: 0 auto;
+}
+
+/* border-box */
+* {
+  @include box-sizing(border-box);
+  @include backface-visibility(hidden);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* h1 - h6 */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+}
+
+/* a */
+// 各ページで色を変更するときは@include a_tagを使用して上書きしてください。
+a {
+  &:link {
+    color: $color_1;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &:visited {
+    color: $color_1;
+    text-decoration: none;
+  }
+  &:hover {
+    color: $color_1;
+    text-decoration: none;
+  }
+  &:active {
+    color: $color_1;
+    text-decoration: none;
+  }
+}
+
+// モバイル時 電話番号カラー
+a[href^="tel"]{
+  color: $color_1;
+}
+
+/* Text Highlight */
+// ::-moz-selection {
+//   background-color: $color_1;
+// }
+//
+// ::selection {
+//   background-color: $color_1;
+// }
+
+/* button */
+button {
+  display: block;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* input */
+// ( 1 ) radio / checkbox 以外リセット
+// input[type='button'], input[type='submit'], input[type='text'], input[type='email'], input[type='tel'],  input[type='url'], input[type='password'], input[type='reset'], input[type='search'], textarea, select {
+//   display: block;
+//   margin: 0;
+//   padding: 0;
+//   outline: none;
+//   border: none;
+//   border-image: none;
+//   background: transparent;
+//   font-family: inherit; // 子要素へ引き継ぎ
+//   @include border-radius(0);
+//   @include appearance(none);
+// }
+
+// ( 2 ) オールリセット
+input, textarea, select {
+  display: block;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-image: none;
+  background: transparent;
+  font-family: inherit; // 子要素へ引き継ぎ
+  @include border-radius(0);
+  @include appearance(none);
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $color_1;
+  }
+}
+
+// input[type='radio'], input[type='checkbox'] {
+//   @include appearance(none);
+// }
+
+// input[type='radio'] {
+//   @include appearance(radio-button);
+//   display: inline-block;
+// }
+
+// input[type='checkbox'] {
+//   @include appearance(checkbox);
+//   display: inline-block;
+// }
+
+// input[type='submit'] {
+//   -webkit-tap-highlight-color: #fff;
+// }
+
+/* placeholder */
+// 各ページで色を変更するときは@include placeholderを使用して上書きしてください。
+input, textarea {
+  @include placeholder($color_1);
+  &:focus {
+    @include placeholder($color_1);
+  }
+}
+
+// ドラッグ禁止
+img {
+  pointer-events: none;
+  @include user_select(none);
+}

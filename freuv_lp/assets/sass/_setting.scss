@@ -1,0 +1,122 @@
+/* ======================================================================
+ setting
+====================================================================== */
+
+$supported-browsers: ('chrome', 'safari', 'firefox', 'ie');
+$graceful-usage-threshold: 0.1;
+$critical-usage-threshold: 0.01;
+$browser-minimum-versions: ('firefox': '15', 'ie': '8');
+
+// 画像のパス
+// $img_path: '../../img/';
+// $img_path2: '../img/';
+
+// ページ全体の横幅
+$base_width: 1200px;
+
+// メイン横幅
+$main_width: 900px;
+
+// サイド横幅
+$side_width: 250px;
+
+// 付与するベンダープレフィックス
+// $set_prefix: -webkit-, -moz-, -ms-, -o-, '';
+
+//=================================
+// font
+//=================================
+
+// 基本フォント
+$gothic_font: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'hiragino kaku gothic pro', 'メイリオ', Meiryo, '游ゴシック', YuGothic, Verdana, sans-serif;
+$min_font: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝', YuMincho, 'HG明朝E', 'MS P明朝', 'MS 明朝', serif;
+
+// google font
+$noto_sans_font: 'Noto Sans JP', sans-serif;
+
+$btn_font: "Josefin Sans", "Noto Sans Japanese", sans-serif;
+
+// font-face
+// @include font-face('name01', font-files('name01/name01.woff', 'name01/name01.ttf'), 'name01/name01.eot');
+// @include font-face('name02', font-files('name02/name02.woff', 'name02/aname02.ttf'), 'name02/name02.eot');
+
+//=================================
+// color
+//=================================
+
+$color_1: #01a4f8;
+
+$color_2: #fff600;
+
+$color_3: #141414;
+
+$color_4: #fff;
+
+$color_5: #f0f0f0;
+
+$color_6: #ff036e;
+
+$color_7: #000;
+
+$color_8: #000;
+
+$color_9: #000;
+
+$color_10: #000;
+
+$color_11: #000;
+
+$color_12: #000;
+
+$color_13: #000;
+
+$color_14: #000;
+
+$color_15: #000;
+
+$color_16: #000;
+
+$color_17: #000;
+
+$color_18: #000;
+
+$color_19: #000;
+
+$color_20: #000;
+
+//=================================
+// CSS Transition Easing
+//=================================
+// Default
+$linear: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+$ease: cubic-bezier(0.250, 0.100, 0.250, 1.000);
+$ease-in: cubic-bezier(0.420, 0.000, 1.000, 1.000);
+$ease-out: cubic-bezier(0.000, 0.000, 0.580, 1.000);
+$ease-in-out: cubic-bezier(0.420, 0.000, 0.580, 1.000);
+// In
+$easeInQuad: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$easeInCubic: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$easeInQuart: cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$easeInQuint: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$easeInSine: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$easeInExpo: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$easeInCirc: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$easeInBack: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+// Out
+$easeOutQuad: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$easeOutCubic: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$easeOutQuart: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$easeOutSine: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$easeOutExpo: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$easeOutCirc: cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+// In Out
+$easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$easeInOutSine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+$easeInOutExpo: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$easeInOutBack: cubic-bezier(0.680, -0.550, 0.265, 1.550);

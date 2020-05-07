@@ -1,0 +1,15 @@
+<svg id="btn" xmlns="http://www.w3.org/2000/svg" width="79" height="78" viewBox="0 0 79 78">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f0f0f0;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="長方形_11" data-name="長方形 11" class="cls-1" width="79" height="78"/>
+  <path id="Forma_1" data-name="Forma 1" class="cls-2" d="M1122.5,16340.8h-11.31v-0.3h-2.38v0.3H1097.5v2.4h11.31v0.3h2.38v-0.3h11.31v-2.4Z" transform="translate(-1070 -16303)"/>
+</svg>

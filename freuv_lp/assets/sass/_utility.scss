@@ -1,0 +1,189 @@
+/* ======================================================================
+ utility
+====================================================================== */
+
+/* =================================
+ layout
+================================= */
+// clearfix
+.cf {
+  @include has-layout;
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    content: '\0020';
+  }
+}
+
+// // pc・sp 出し分け sp / pcどちらからコーディングするかでどちらかをコメントアウトすること 初期 : spからコーディング
+// // spからコーディング : モバイルファースト
+// @include mq_min_1025 {
+//   .u_pc {
+//     display: block;
+//   }
+//   .u_sp {
+//     display: none;
+//   }
+// }
+// @include mq_max_1024 {
+//   .u_pc {
+//     display: none;
+//   }
+//   .u_sp {
+//     display: block;
+//   }
+// }
+
+// pcからコーディング
+@include mq_min_769 {
+  .u_pc {
+    display: block;
+  }
+  .u_sp {
+    display: none;
+  }
+}
+@include mq_max_768 {
+  .u_pc {
+    display: none;
+  }
+  .u_sp {
+    display: block;
+  }
+}
+
+// sp menu height100%時 body:fixed
+.u_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.u_body_fixed {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* =================================
+ text pt
+================================= */
+.u_txt_1 {
+  font-size: 1.8em;
+  line-height: 1;
+  letter-spacing: 0;
+  @include mq_max_768 {
+    font-size: 1.5em;
+  }
+}
+
+.u_txt_2 {
+  font-size: 1.2em;
+  line-height: 1;
+  letter-spacing: 0;
+  @include mq_max_768 {
+    font-size: 1.1em;
+  }
+}
+
+.u_txt_3 {
+  font-size: 1.6em;
+  line-height: calc(30/16);
+  letter-spacing: .06em;
+  @include mq_max_768 {
+    font-size: 1.3em;
+    line-height: calc(25/13);
+    letter-spacing: .06em;
+  }
+}
+
+.u_txt_4 {
+  font-size: 1.8em;
+  line-height: calc(26/18);
+  letter-spacing: .08em;
+  @include mq_min_769 {
+  }
+  @include mq_min_1025 {
+  }
+}
+
+.u_txt_5 {
+  font-size: 2.6em;
+  line-height: 1;
+  letter-spacing: .08em;
+  @include mq_max_768 {
+    font-size: 1.6em;
+    line-height: 1;
+    letter-spacing: .08em;
+  }
+}
+
+.u_txt_6 {
+  font-size: 1.6em;
+  line-height: 1;
+  letter-spacing: .06em;
+  @include mq_max_768 {
+    font-size: 1.5em;
+  }
+}
+
+.u_txt_7 {
+  font-size: 1.6em;
+  line-height: 1;
+  letter-spacing: 0;
+  @include mq_max_768 {
+    font-size: 1.3em;
+  }
+}
+
+/* =================================
+ text weight
+================================= */
+.u_lighter {
+  font-weight: lighter;
+}
+
+.u_bold {
+  font-weight: bold;
+}
+
+/* =================================
+ text marker
+================================= */
+// 黄色 太め
+.u_marker_1_1 {
+  @include background(linear-gradient(to bottom, rgba(255,255,102,1) 0%,rgba(255,255,102,1) 100%));
+}
+
+// 黄色 細め
+.u_marker_1_2 {
+  @include background(linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 40%,rgba(255,255,102,1) 100%));
+}
+
+/* =================================
+ box-shadow
+================================= */
+.u_box_shadow_1 {
+  @include box-shadow(0 0 30px rgba(0,0,0,.1));
+}
+
+/* =================================
+ gradation
+================================= */
+.u_gradient_1 {
+  @include background(linear-gradient(180deg, rgb(169,233,243) 0%, rgb(169,233,243) 10%, rgb(45,157,174) 25%, rgb(45,157,174) 37%, rgb(45,157,174) 50%, rgb(45,157,174) 83%, rgb(189,245,253) 100%));
+}
+
+/* =================================
+ animation
+================================= */
+.u_anima_1 {
+}
+
+/* =================================
+ hoge
+================================= */
+// .u_hoge {}
